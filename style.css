@@ -25,7 +25,7 @@
 }
 
 body {
-  background: var(--bg-url) no-repeat top center/cover; /*essa linha é um resumo (Shothand)*/
+  background: var(--bg-url) no-repeat top center/cover;
   height: 100vh;
 }
 
@@ -42,6 +42,7 @@ body * {
 }
 
 /*profile */
+
 #profile {
   text-align: center;
   padding: 24px;
@@ -50,6 +51,8 @@ body * {
 
 #profile img {
   width: 112px;
+  height: 112px;
+  border-radius: 50%;
 }
 
 #profile p {
@@ -58,10 +61,10 @@ body * {
 }
 
 /*switch */
+
 #switch {
   position: relative;
   width: 64px;
-
   margin: 4px auto;
 }
 
@@ -77,7 +80,7 @@ body * {
   position: absolute;
   top: 50%;
   left: 0;
-  z-index: 1; /*é oque define a sobreposição do mesmo elemento no local*/
+  z-index: 1;
   transform: translateY(-50%);
   animation: slide-back 0.2s;
 }
@@ -102,49 +105,43 @@ body * {
 }
 
 /* links */
+
 ul {
   list-style: none;
-
   display: flex;
   flex-direction: column;
-  gap: 16px; /*espaço entre cada coluna */
-
+  gap: 16px;
   padding: 24px 0;
 }
 
 ul li a {
   display: flex;
-  align-items: center; /* alinha o testo no meio da caixa */
+  align-items: center;
   justify-content: center;
-
   padding: 16px 24px;
-
   background: var(--surface-color);
   border: 1px solid var(--stroke-color);
-  border-radius: 8px; /*esse faz com que fique circular nas pontas nas caixas */
-
+  border-radius: 8px;
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
-
-  text-decoration: none; /*uma linha sublinhando em baixo do texto */
+  text-decoration: none;
   font-weight: 500;
-
   transition: background 0.2s;
 }
 
 /* pseudo-selector */
+
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1.5px solid var(--text-color);
 }
 
 /*social links */
+
 #social-links {
   display: flex;
   justify-content: center;
-
   padding: 24px 0;
-
   font-size: 24px;
 }
 
@@ -153,7 +150,6 @@ ul li a:hover {
   align-items: center;
   justify-content: center;
   padding: 16px;
-
   transition: background 0.2s;
   border-radius: 50%;
 }
@@ -169,6 +165,7 @@ footer {
 }
 
 /* media queries */
+
 @media (min-width: 700px) {
   :root {
     --bg-url: url(./assets/bg-desktop.jpg);
@@ -180,6 +177,7 @@ footer {
 }
 
 /* animation */
+
 @keyframes slide-in {
   from {
     left: 0;
